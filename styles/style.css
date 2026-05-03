@@ -64,7 +64,12 @@ header {
   transition: background-color .5s ease, color .5s ease;
 }
 
-#menu a:hover {
+#menu a:hover, #menu a:focus {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
+}
+
+#menu a:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }
