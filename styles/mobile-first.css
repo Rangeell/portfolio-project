@@ -300,10 +300,17 @@ article {
   color: var(--destaque);
 }
 
+/* PROJECT AREA */
 #projeto-container {
   display: flex;
   flex-flow: column-reverse nowrap;
   gap: 20px;
+}
+
+#projeto-container a {
+  text-decoration: none;
+  color: inherit;
+
 }
 
 #projeto-container .projeto {
@@ -314,13 +321,18 @@ article {
   padding: 10px;
   border-radius: 8px;
   border-left: 5px solid var(--destaque-inverso);
-  transition: all .5s ease;
+  transition: all .5s ease, transform .1s ease-in-out;
 }
 
-#projeto-container .projeto:hover {
+#projeto-container .projeto:hover,
+#projeto-container .projeto:focus {
   border-left-width: 15px;
   border-left-color: var(--destaque);
   cursor: pointer;
+}
+
+#projeto-container .projeto:active {
+  transform: scale(.95);
 }
 
 #projeto-container .foto {
@@ -331,6 +343,7 @@ article {
   overflow: hidden;
 }
 
+/* FOOTER AREA */
 footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
@@ -347,7 +360,8 @@ footer a {
   transition: all .3s ease;
 }
 
-footer a:hover, footer a:focus-visible {
+footer a:hover,
+footer a:focus-visible {
   color: var(--destaque-inverso);
   transform: scale(1.05);
   margin: 0px 5px;
@@ -358,7 +372,7 @@ footer a:hover, footer a:focus-visible {
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
- 
+
   #projeto-container .projeto {
     flex-direction: row-reverse;
     justify-content: space-between;
