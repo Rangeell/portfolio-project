@@ -291,7 +291,7 @@ article {
 #formacao-container .curso:hover {
   border-left-width: 15px;
   cursor: pointer;
-  border-left-color: #0077ff;
+  border-left-color: var(--destaque);
 }
 
 #formacao-container .periodo {
@@ -323,6 +323,10 @@ article {
 
 }
 
+#projeto-container p {
+  margin-bottom: 10px;
+}
+
 #projeto-container .projeto {
   display: flex;
   flex-direction: column;
@@ -336,7 +340,7 @@ article {
 
 #projeto-container .projeto:hover,
 #projeto-container .projeto:focus {
-  border-left-width: 15px;
+  border-left-width: 12px;
   border-left-color: var(--destaque);
   cursor: pointer;
 }
@@ -410,7 +414,7 @@ footer a:focus-visible {
   #projeto-container .foto {
     aspect-ratio: 1/1;
     max-width: 30%;
-    min-width: 360px;
+    min-width: 330px;
     max-height: 200px;
   }
 }
