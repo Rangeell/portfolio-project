@@ -116,6 +116,7 @@ main {
 
 #ficha .foto:hover {
   outline-color: var(--destaque-inverso);
+  cursor: pointer;
 }
 
 #ficha h1 {
@@ -129,6 +130,7 @@ main {
 #ficha h1:hover,
 #detalhes h2:hover {
   color: var(--destaque-inverso);
+  cursor: pointer;
 }
 
 #ficha p {
@@ -167,11 +169,10 @@ main {
   grid-column: 2;
 }
 
-#detalhes h2,
-h3 {
+#detalhes h2 {
   color: var(--destaque);
   transition: color 0.3s ease;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 #detalhes h2 {
@@ -226,8 +227,6 @@ article {
 } */
 
 /* SKILLS AREA */
-
-/* html skill area*/
 #skill-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -265,10 +264,46 @@ article {
   transition: background-color .3s ease;
 }
 
+/* FORMACAO AREA */
+#formacao-container {
+  display: flex;
+  flex-flow: column-reverse wrap;
+  gap: 20px;
+}
+
+#formacao-container .curso {
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  padding-left: 15px;
+  transition: border-left-width .5s ease, border-left-color .5s ease;
+}
+
+#formacao-container .curso:hover {
+  border-left-width: 15px;
+  cursor: pointer;
+  border-left-color: #0077ff;
+}
+
+#formacao-container .periodo {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#formacao-container .instituicao {
+  color: var(--destaque-inverso);
+  font-size: 1.1rem;
+  transition: color .3s ease;
+}
+
+#formacao-container .curso:hover .instituicao {
+  color: var(--destaque);
+}
+
 /* MEDIA QUERY */
 @media screen and (min-width:768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
 }
-
