@@ -265,8 +265,10 @@ article {
   transition: background-color .3s ease;
 }
 
+/* MEDIA QUERY */
 @media screen and (min-width:768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
 }
+
