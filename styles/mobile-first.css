@@ -371,6 +371,7 @@ summary::before {
   content: "▼";
   float: left;
   transition: transform .3s ease;
+  margin-right: 5px;
 }
 
 .descricao[open] summary::before {
