@@ -317,16 +317,6 @@ article {
   gap: 20px;
 }
 
-#projeto-container a {
-  text-decoration: none;
-  color: inherit;
-
-}
-
-#projeto-container p {
-  margin-bottom: 10px;
-}
-
 #projeto-container .projeto {
   display: flex;
   flex-direction: column;
@@ -355,6 +345,44 @@ article {
   object-fit: cover;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.projeto .foto {
+  transition: transform .3s ease;
+}
+
+.projeto .foto:active {
+  transform: scale(.95);
+  transition: .1s ease;
+}
+
+#projeto-container a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::before {
+  content: "▼";
+  float: left;
+  transition: transform .3s ease;
+}
+
+.descricao[open] summary::before {
+  transform: rotate(-180deg);
+}
+
+summary::before {
+  color: var(--destaque);
+}
+
+#projeto-container p {
+  margin-bottom: 10px;
 }
 
 /* FOOTER AREA */
@@ -417,4 +445,18 @@ footer a:focus-visible {
     min-width: 330px;
     max-height: 200px;
   }
+
+  #projeto-container #foto-cordel {
+    object-position: .1px center;
+  }
+
+  .projeto .foto:hover {
+    transform: translateX(-8px) scale(1.03);
+  }
+
+  .projeto .foto:active {
+    transform: translateX(8px) scale(.95);
+    transition: .1s ease;
+  }
+  
 }
